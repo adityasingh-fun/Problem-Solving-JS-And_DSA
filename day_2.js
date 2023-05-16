@@ -1,3 +1,149 @@
+// Home assignment
+
+const arr = [10, 20, 16, 7, 99, 3, 31, 8, 19, 90, 101, 55];
+
+// 1. find the maximum element in an array
+
+function largestNumber(arr) {
+    let largest = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+console.log("The largest element in the array is", largestNumber(arr))
+
+// 2. find the minimum element in an array
+
+
+function smallestNumber(arr) {
+    let smallest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+console.log("Smallest number in the array is", smallestNumber(arr))
+
+// 3. find the second largest element in an array
+
+function secondLargest(arr) {
+    let largest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    let second_largest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > second_largest && arr[i] < largest) {
+            second_largest = arr[i];
+        }
+    }
+    return second_largest;
+}
+console.log("The second largest number in the array is", secondLargest(arr))
+
+// 4. find the second smallest element in an array
+
+function secondSmallest(arr) {
+    let smallest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    let second_smallest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < second_smallest && arr[i] > smallest) {
+            second_smallest = arr[i];
+        }
+    }
+    return second_smallest
+}
+console.log("The second smallest numbers in the array is", secondSmallest(arr))
+
+// 5. find the sum of all elements in an array
+
+function sumOfArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+console.log("Sum of all the elements of the array is", sumOfArray(arr))
+
+// 6. find the average of all elements in an array
+
+function average(arr){
+    let sum = 0;
+    for(let i=0;i<arr.length;i++){
+        sum = sum + arr[i];
+    }
+    let avg = sum/arr.length;
+    return avg;
+}
+console.log("Average of all the elements of the array is", average(arr))
+
+// 7. find the sum of all even elements in an array
+
+function sumOfEven(arr){
+    let evenSum = 0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 == 0){
+            evenSum = evenSum + arr[i];
+        }
+    }
+    return evenSum;
+}
+console.log("Sum of even elements of the array is", sumOfEven(arr))
+
+// 8. find the sum of all odd elements in an array
+
+function sumOfOdd(arr){
+    let oddSum = 0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 != 0){
+            oddSum = oddSum + arr[i];
+        }
+    }
+    return oddSum;
+}
+console.log("Sum of odd elements of the array is",sumOfOdd(arr))
+
+// 9. find the number of even elements in an array
+
+function noOfEvenElements(arr){
+    let count = 0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 == 0){
+            count++;
+        }
+    }
+    return count;
+}
+console.log("Total number of even elements in the array is", noOfEvenElements(arr))
+
+// 10. find the number of odd elements in an array
+
+function noOfOddElements(arr){
+    let count = 0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 != 0){
+            count++;
+        }
+    }
+    return count;
+}
+console.log("No of odd elements in the array are",noOfOddElements(arr))
+
+
 //Array
 
 // 21,23,5562,5
@@ -119,15 +265,3 @@
 
 // console.log(arr[0][0]);
 // console.log(arr[0][2]);
-
-// Home assignment
-// 1. find the maximum element in an array
-// 2. find the minimum element in an array
-// 3. find the second largest element in an array
-// 4. find the second smallest element in an array
-// 5. find the sum of all elements in an array
-// 6. find the average of all elements in an array
-// 7. find the sum of all even elements in an array
-// 8. find the sum of all odd elements in an array
-// 9. find the number of even elements in an array
-// 10. find the number of odd elements in an array
